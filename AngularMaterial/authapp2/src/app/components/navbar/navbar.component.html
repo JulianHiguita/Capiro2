@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" onMouseover="this.style.color='blue'" hover="success">
+
+    <a class="navbar-brand" href="#"><img src="../../../assets/capiro.png" style="height: 70px;"></a>
+
+    <div class="collapse navbar-collapse" id="navbarText" style="float: right;top: 12px; right: 22px;">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" routerLinkActive="active">
+                <a class="navbar-brand" routerLink="/home"> HOME </a>
+            </li>
+
+            <li class="nav-item" routerLinkActive="active" *ngIf="auth.loggedIn">
+                <a class="navbar-brand" routerLink="/precios">REPORTE PRELIMINAR </a>
+            </li>
+
+            <li class="nav-item " routerLinkActive="active" *ngIf="auth.loggedIn">
+                <a class="navbar-brand" routerLink="/protegida">REPORTE DE CONTEO CONSOLIDADOS </a>
+            </li>
+
+
+            <li class="nav-item " routerLinkActive="active" *ngIf="auth.loggedIn">
+                <a class="navbar-brand" routerLink="/red">CON RED </a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+
+      <button *ngIf="!auth.loggedIn" (click)="auth.login()" class="btn btn-outline-success">
+        Ingresar
+      </button>
+      <button *ngIf="auth.loggedIn" (click)="auth.logout()" class="btn btn-outline-success">
+        Salir
+      </button>
+    </span>
+    </div>
+</nav>

@@ -1,0 +1,698 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<br>
+
+<div class="row pt-3">
+    <div class="col-20">
+        <h2 style="text-align: left; color: rgb(0, 0, 0)"> Reporte Preliminar </h2>
+
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+
+<hr>
+
+<body style="text-align: left;">
+
+    <!-- <div class="row pt-3" >
+        <div class="col-50">
+        <table class="egt">
+            <thead>
+                <tr>
+                    <th colspan="2"></th>
+                    <th colspan="3">CapInventary Inicial</th>
+                    <Th colspan="5">Conteo</Th>
+                    <th colspan="4">Ajustes</th>
+                    <th colspan="3">Cap CapInventary Final</th>
+                </tr>
+
+
+                <tr>
+                    <th>código </th>
+                    <th>Variedad</th>
+                    <th>Disponible</th>
+                    <th>Tránsito</th>
+                    <th>Totál</th>
+                    <th>Disponible</th>
+                    <th>Tránsito</th>
+                    <th>Sincronizados</th>
+                    <th>Despachados</th>
+                    <th>Totál</th>
+                    <th>Ingresos</th>
+                    <th>Reingresos</th>
+                    <th>Salidas</th>
+                    <th>Totál Ajuste</th>
+                    <th>Disponible</th>
+                    <th>Tránsito</th>
+                    <th>Totál</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>VAYL</td>
+
+                    <td>VALESKA</td>
+
+                    <td>3223</td>
+
+                    <td>34534</td>
+
+                    <td>45645</td>
+
+                    <td>475675</td>
+
+                    <td>2342</td>
+
+                    <td>56456</td>
+
+                    <td>6756</td>
+
+                    <td>345345</td>
+
+                    <td>3453</td>
+
+                    <td>88987</td>
+
+                    <td>673453</td>
+
+                    <td>23564</td>
+
+                    <td>6785</td>
+
+                    <td>8966</td>
+
+                    <td>4534</td>
+
+                </tr>
+
+                <tr>
+                    <td>BNWH</td>
+
+                    <td>BONITA</td>
+
+                    <td>5600</td>
+
+                    <td>0898</td>
+
+                    <td>8989</td>
+
+                    <td>6557</td>
+
+                    <td>234234</td>
+
+                    <td>345</td>
+
+                    <td>3453</td>
+
+                    <td>5675</td>
+
+                    <td>785</td>
+
+                    <td>56756</td>
+
+                    <td>4564</td>
+
+                    <td>2345</td>
+
+                    <td>6200</td>
+
+                    <td>4346</td>
+
+                    <td>7200</td>
+
+
+
+                </tr>
+
+                <tr>
+                    <td>SNTY</td>
+
+                    <td>SANTINI</td>
+
+                    <td>6200</td>
+
+                    <td>1000</td>
+
+                    <td>7200</td>
+
+                    <td>78566</td>
+
+                    <td>1000</td>
+
+                    <td>343</td>
+
+                    <td>786</td>
+
+                    <td>323423</td>
+
+
+                    <td>4563</td>
+
+                    <td>23442</td>
+
+                    <td>56756</td>
+
+                    <td>7897</td>
+
+                    <td>34534</td>
+
+                    <td>3445</td>
+
+                    <td>3453</td>
+                </tr>
+
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th th colspan="2">TOTALES</th>
+                    <td>235723</td>
+                    <td>9457</td>
+                    <td>43567</td>
+                    <td>23423</td>
+                    <td>134234</td>
+                    <td>645434</td>
+                    <td>34523</td>
+                    <td>2342</td>
+                    <td>345345</td>
+                    <td>453466</td>
+                    <td>2324565</td>
+                    <td>34534</td>
+                    <td>756734</td>
+                    <td>4566322</td>
+                    <td>88566</td>
+
+                </tr>
+
+            </tfoot>
+        </table>
+
+    </div>
+</div> -->
+
+    <div class="row pt-3" style="background:#fff; padding: 24px; height: 100%;">
+        <div class="col-50">
+
+            <table class="center" style="width: 100%; ">
+
+                <thead>
+                    <tr>
+                        <th class="cap" style="background-color: rgb(221, 221, 221); " colspan=" 2"></th>
+                        <th class="cap" style="background-color: rgb(221, 221, 221); text-decoration: black;" colspan="3">Capacidad inventario inicial
+                        </th>
+                        <Th class="cap" style="background-color: rgb(221, 221, 221);;" colspan="5">Conteo</Th>
+                    </tr>
+
+                    <tr>
+                        <th>código <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+              </svg></th>
+                        <th>Variedad <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+              </svg></th>
+                        <th>Disponible <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+              </svg></th>
+                        <th>Tránsito <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+              </svg></th>
+                        <th>Totál <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+              </svg></th>
+                        <th>Disponible <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+              </svg></th>
+                        <th>Tránsito <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+              </svg></th>
+                        <th>Sincronizados <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+              </svg></th>
+                        <th>Despachados <svg class="text-align-raight" width="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+              </svg></th>
+                        <th>Totál</th>
+
+                    </tr>
+                    <tr>
+                        <td>VAYL</td>
+
+                        <td>VALESKA</td>
+
+                        <td>3223</td>
+
+                        <td>34534</td>
+
+                        <td>45645</td>
+
+                        <td>475675</td>
+
+                        <td>2342</td>
+
+                        <td>56456</td>
+
+                        <td>6756</td>
+
+                        <td>345345</td>
+                    </tr>
+                    <tr>
+                        <td>BNWH</td>
+
+                        <td>BONITA</td>
+
+                        <td>5600</td>
+
+                        <td>0898</td>
+
+                        <td>8989</td>
+
+                        <td>6557</td>
+
+                        <td>234234</td>
+
+                        <td>345</td>
+
+                        <td>3453</td>
+
+                        <td>5675</td>
+                    </tr>
+
+                    <tr>
+                        <td>SNTY</td>
+
+                        <td>SANTINI</td>
+
+                        <td>6200</td>
+
+                        <td>1000</td>
+
+                        <td>7200</td>
+
+                        <td>78566</td>
+
+                        <td>1000</td>
+
+                        <td>343</td>
+
+                        <td>786</td>
+
+                        <td>323423</td>
+                    </tr>
+
+                    <tr>
+                        <th th colspan="2">TOTALES</th>
+                        <td>235723</td>
+                        <td>9457</td>
+                        <td>43567</td>
+                        <td>23423</td>
+                        <td>134234</td>
+                        <td>645434</td>
+                        <td>34523</td>
+                        <td>2342</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <div class="row pt-3" style="background:#fff; padding: 24px; height: 100%;">
+        <div class="col-50">
+            <table class="center" style="width: 125%; ">
+
+                <tr>
+                    <th class="cap" style="background-color: rgb(221, 221, 221);" colspan="4">Ajustes </th>
+                    <th class="cap" style="background-color: rgb(221, 221, 221);" colspan="3">Capacidad inventario Final
+                    </th>
+                </tr>
+
+
+                <tr>
+
+                    <th>Ingresos <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Reingresos <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Salidas <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Totál Ajuste <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Disponible <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Tránsito <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Totál</th>
+                </tr>
+
+                <tbody>
+                    <tr>
+                        <td>VAYL</td>
+
+                        <td>VALESKA</td>
+
+                        <td>3223</td>
+
+                        <td>34534</td>
+
+                        <td>45645</td>
+
+                        <td>475675</td>
+
+                        <td>2342</td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>BNWH</td>
+
+                        <td>BONITA</td>
+
+                        <td>5600</td>
+
+                        <td>0898</td>
+
+                        <td>8989</td>
+
+                        <td>6557</td>
+
+                        <td>234234</td>
+                    </tr>
+
+
+                    <tr>
+                        <th th colspan="2">TOTALES</th>
+                        <td>235723</td>
+                        <td>9457</td>
+                        <td>43567</td>
+                        <td>23423</td>
+                        <td>134234</td>
+
+                    </tr>
+
+
+                </tbody>
+
+
+
+            </table>
+        </div>
+    </div>
+
+    <div class="row pt-3" style="background:#fff; padding: 24px; height: 100%;">
+        <div class="col-50">
+            <table class="center" style="width: 125%; ">
+
+                <tr>
+                    <th class="cap" style="background-color: rgb(221, 221, 221);" colspan="4">Ajustes </th>
+                    <th class="cap" style="background-color: rgb(221, 221, 221);" colspan="3">Capacidad inventario Final
+                    </th>
+                </tr>
+
+
+                <tr>
+
+                    <th>Ingresos <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Reingresos <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Salidas <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Totál Ajuste <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Disponible <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Tránsito <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Totál</th>
+                </tr>
+
+                <tbody>
+                    <tr>
+                        <td>VAYL</td>
+
+                        <td>VALESKA</td>
+
+                        <td>3223</td>
+
+                        <td>34534</td>
+
+                        <td>45645</td>
+
+                        <td>475675</td>
+
+                        <td>2342</td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>BNWH</td>
+
+                        <td>BONITA</td>
+
+                        <td>5600</td>
+
+                        <td>0898</td>
+
+                        <td>8989</td>
+
+                        <td>6557</td>
+
+                        <td>234234</td>
+                    </tr>
+
+
+                    <tr>
+                        <th th colspan="2">TOTALES</th>
+                        <td>235723</td>
+                        <td>9457</td>
+                        <td>43567</td>
+                        <td>23423</td>
+                        <td>134234</td>
+
+                    </tr>
+
+
+                </tbody>
+
+
+
+            </table>
+        </div>
+    </div>
+
+    <div class="row pt-3" style="background:#fff; padding: 24px; height: 100%;">
+        <div class="col-50">
+            <table class="center" style="width: 125%; ">
+
+                <tr>
+                    <th class="cap" style="background-color: rgb(221, 221, 221);" colspan="4">Ajustes </th>
+                    <th class="cap" style="background-color: rgb(221, 221, 221);" colspan="3">Capacidad inventario Final
+                    </th>
+                </tr>
+
+
+                <tr>
+
+                    <th>Ingresos <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Reingresos <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Salidas <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Totál Ajuste <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Disponible <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Tránsito <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd"
+                d="M10.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L11 3.707 8.354 6.354a.5.5 0 1 1-.708-.708l3-3zm-9 7a.5.5 0 0 1 .708 0L5 12.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+              <path fill-rule="evenodd" d="M5 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+            </svg></th>
+                    <th>Totál</th>
+                </tr>
+
+                <tbody>
+                    <tr>
+                        <td>VAYL</td>
+
+                        <td>VALESKA</td>
+
+                        <td>3223</td>
+
+                        <td>34534</td>
+
+                        <td>45645</td>
+
+                        <td>475675</td>
+
+                        <td>2342</td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>BNWH</td>
+
+                        <td>BONITA</td>
+
+                        <td>5600</td>
+
+                        <td>0898</td>
+
+                        <td>8989</td>
+
+                        <td>6557</td>
+
+                        <td>234234</td>
+                    </tr>
+
+
+                    <tr>
+                        <th th colspan="2">TOTALES</th>
+                        <td>235723</td>
+                        <td>9457</td>
+                        <td>43567</td>
+                        <td>23423</td>
+                        <td>134234</td>
+
+                    </tr>
+
+
+                </tbody>
+
+
+
+            </table>
+        </div>
+    </div>
+
+
+
+    <br>
+    <form>
+        <div style="text-align:left">
+            <button style="margin: 10px" type="button" class="btn btn-outline-success">Revertir</button>
+            <div style="float:right;">
+                <button style="margin: 10px" type="button" class="btn btn-outline-success">Exportar</button>
+
+                <div style="float:right;">
+                    <button style="margin: 10px" type="button" class="btn btn-outline-success">Finalizar inventario</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<br>
+<br>
+<h1 class="m-2"> CapInventary Inicial </h1>
+<hr>
+
+<!-- <pre *ngIf="auth.userProfile$ | async as profile">
+
+    <code>{{ profile | json }}</code>
+
+</pre> -->
+
+<div class="example-container mat-elevation-z8">
+
+
+    <table mat-table [dataSource]="transactions" class="mat-elevation-z8 table-success" style="color: rgb(255, 255, 255);">
+        <!-- Item Column -->
+        <ng-container matColumnDef="codigo" style="text-align: center;">
+            <!-- <mat-icon class="mat-icon-rtl-mirror" svgIcon="thumb-up">unfold_more</mat-icon> -->
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Codigo
+                <mat-icon style="position:absolute">unfold_more</mat-icon>
+            </th>
+
+            <td mat-cell *matCellDef="let transaction"> {{transaction.codigo}} </td>
+            <td mat-footer-cell *matFooterCellDef> Total </td>
+        </ng-container>
+
+        <ng-container matColumnDef="variedad">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Variedad
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.variedad}} </td>
+            <td mat-footer-cell *matFooterCellDef> </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="disponibleIni">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Disponible
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.disponibleIni}} </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotalDis() | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="transitoIni">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Transito
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.transitoIni}} </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotalTran() | currency}} </td>
+        </ng-container>
+
+        <!-- Cost Column -->
+        <ng-container matColumnDef="totalIni">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Total
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.totalIni | currency}} </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="numCon">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> # de Conteo
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.numCon}} </td>
+            <td mat-footer-cell *matFooterCellDef> </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+    </table>
+
+</div>
+<br>
+<br>
+
+<h1 class="m-2"> Conteo </h1>
+<hr>
+
+<div class="example-container mat-elevation-z8">
+
+    <table mat-table [dataSource]="transactions" class="mat-elevation-z8 table-success" style="color: antiquewhite;" bgcolo>
+        <!-- Item Column -->
+        <ng-container matColumnDef="codigo">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Codigo
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.codigo}} </td>
+            <td mat-footer-cell *matFooterCellDef> Total </td>
+        </ng-container>
+
+        <ng-container matColumnDef="variedad">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Variedad
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.variedad}} </td>
+            <td mat-footer-cell *matFooterCellDef> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="disponibleIni">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Disponible
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.disponibleIni}} </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotalDis() | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="transitoIni">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Transito
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.transitoIni}} </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotalTran() | currency}} </td>
+        </ng-container>
+
+        <!-- Cost Column -->
+        <ng-container matColumnDef="totalIni">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Total
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.totalIni | currency}} </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="numCon">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> # de Conteo
+                <mat-icon style="position:absolute">
+                    unfold_more</mat-icon>
+            </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.numCon}} </td>
+            <td mat-footer-cell *matFooterCellDef> </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+    </table>
+
+</div>
+
+<br>
+<br>
+
+<br>
+<br>
+<form>
+    <div style="text-align:left">
+        <button style="margin: 10px" type="button" class="btn btn-outline-success">Ir a ajustes</button>
+        <div style="float:left;">
+            <button style="margin: 10px" type="button" class="btn btn-outline-success">Exportar</button>
+
+            <div style="float:right;">
+                <button style="margin: 10px" type="button" class="btn btn-outline-success">Recontar / Adicionar</button>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
